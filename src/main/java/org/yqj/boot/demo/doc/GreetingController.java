@@ -1,4 +1,4 @@
-package org.yqj.boot.demo;
+package org.yqj.boot.demo.doc;
 
 import org.springframework.core.env.SystemEnvironmentPropertySource;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -17,13 +17,13 @@ import org.yqj.boot.demo.doc.HelloMessage;
 @Controller
 public class GreetingController {
 
-    @MessageMapping("/hello")
-    @SendTo("/topic/greetings")
-    public Greeting greeting(HelloMessage message) throws Exception {
-        System.out.println("********getdata");
-        Thread.sleep(3000); // simulated delay
-        System.out.println("********toSend");
-        return new Greeting("Hello, " + message.getName() + "!");
-    }
+//    @MessageMapping("/hello")
+//    @SendTo("/topic/greetings")
+//    public Greeting greeting(HelloMessage message) throws Exception {
+//        System.out.println("********getdata");
+//        Thread.sleep(3000); // simulated delay
+//        System.out.println("********toSend");
+//        return new Greeting("Hello, " + message.getName() + "!");
+//    }
 
 }
