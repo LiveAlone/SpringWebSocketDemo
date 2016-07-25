@@ -14,16 +14,16 @@ import org.yqj.boot.demo.doc.HelloMessage;
  * Descirbe:
  */
 
-@Controller
+//@Controller
 public class GreetingController {
 
-//    @MessageMapping("/hello")
-//    @SendTo("/topic/greetings")
-//    public Greeting greeting(HelloMessage message) throws Exception {
-//        System.out.println("********getdata");
-//        Thread.sleep(3000); // simulated delay
-//        System.out.println("********toSend");
-//        return new Greeting("Hello, " + message.getName() + "!");
-//    }
+    @MessageMapping("/hello")
+    @SendTo("/topic/greetings")
+    public Greeting greeting(HelloMessage message) throws Exception {
+        System.out.println("********getdata");
+        Thread.sleep(3000); // simulated delay
+        System.out.println("********toSend");
+        return new Greeting("Hello, " + message.getName() + "!");
+    }
 
 }
